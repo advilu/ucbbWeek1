@@ -1,0 +1,213 @@
+Day 1 & 2 notes (2/11-2/12)
+
+"Practice makes progression."
+
+For modern web dev:
+    Need to know at least 4 languages (all in JS):
+        Mongo
+        Express
+        React
+        Node
+
+Learning track:
+        1. Learn JS
+        2. How to code algorithms
+        3. How to think like a programmer
+
+CS fundamentals:
+        --algorithms
+        --design patterns
+
+Tips for interviews:
+        --ask quesitons, be a team player
+        --defend your answers
+        --show how you think
+        https://wappalyzer.com tells you what sites use to build, learn before you interview
+
+*A useful analogy:
+html = the nouns
+css = the adjectives
+js = the verbs
+
+Tree of coding, low-level vs high-level:
+
+                                    Assembly--------Machine Code--(0,1)-----How you build missiles
+                                       |                                    and rockets; very fast,
+                                       |                                    but less ability for complexity.
+                                       C---\
+                                       |    \
+                                       /\    \
+                                      / |\    \
+                                     /  | \    \
+        Low-level languages:       C++  C# Java \
+                                                 \
+                                                 / \
+                                                /   \
+                                               /     \
+              High-level languages:       Python    JavaScript
+                        
+                        ^Note the degrees of seperation in translation, 
+                        the high-level languages take more translations, so lag more,
+                        and increased chance of hacking(?).
+
+Learn/familiarize myself with a low-level language to set myself apart--
+understand the theory behind how computers think.
+
+Github is my portfolio, my commits, my trackrecord.
+
+"myth of innovation:"
+You just need to improve something 1%, not create something new.
+
+snake_case vs camelCase vs cabob-case
+
+Terminal commands:
+$ls 
+$pwd
+$cd 
+$clear
+$mkdir--makes a folder, a container
+$touch--makes a file
+$rm--deletes a file
+$rm -r <folderName>--(means recursive), deltes a folder and all the files in it, and in them, etc.
+$open <fileName>--will open the file in browser
+
+for publishing on Github:
+cd --> Desktop
+$git clone https://...urlCopiedFromRepository /* will download the current file; have to pull every time */
+!!!!!!!ALWAYS pwd before you push!
+$pwd
+$git add . /* adds all changes */
+$git commit -m "Created an index.html file" /*writes a message to pair with the file */
+$git push origin master
+
+
+
+
+
+HTML:
+images (and any media content) have sources, links have hyperlink references
+
+can make images into links (nest them):
+    <a href="example.com" target="blank">
+        <img src="secondExample.com" />
+    </a>
+
+------------------
+When interiewing:
+
+Create a CRAP board to get things out of your mind, so you can physically interact with them:
+Conflicts
+Resistance
+Accomplishments
+Procrastination
+
+Get other folk's business cards instead of handing out your own; ask if you two can talk/get coffee later.
+
+------------------
+Git and Github b/c coding is highly collaborative and often remote.
+
+1. use verison control to see branching
+    every team does its own portal, then merges to the master (the admin approves merging)
+2. *pull first, then push your own changes
+------------------
+!HTML
+
+<strong> (bold) used for alerts/read differntly by browsers; use CSS instead.
+Don't use <br>. Style container w/ padding, instead.
+!important for web accessability!
+
+Use semantic (unique, more descriptive) tags:
+    instead of <div>, use <section>, <nav>, <header>, <article>, <aside>, <footer>
+    (see HTML5 semantics tab on w3school.com)
+
+<table> is being taken over by CSS, instead.
+
+Mozilla html documentation page.
+
+Common UI Form Elements:
+<form> creates a form section in HTML
+<input> for text/input fields;
+    e.g. 
+    <label>First Name</label>
+    <input type="text" name="firstname">
+<label> labels for boxes
+<button>
+<textarea> creates a large text box
+
+"Content is king."
+Be as descriptive as possible for SEO.
+Not just readable, but accessible code.
+
+Methodology:
+Do bare bones html, then go back and do css, then js, etc.
+
+Note: <a href="#"></a> will hyperlink, but not leave page when clicked on
+
+Shortcut: command + option + up or down will grab multiple lines
+------------------
+
+!CSS
+
+&lt = "and less than"
+&gt = "and greater than"
+instead of < and >, b/c those are opening and closing tags
+
+CSS works by hooking onto selectors added into HTML using classes and identifiers
+Once hooked, we apply styles to those HTML elements using CSS
+
+a - selector
+{ - declaration start
+background-color - property
+: - property/value seperator
+yellow - value 
+; - declaration seperator
+} - declaration end
+
+a {
+    background-color: yellow;
+}
+
+
+id - used for specific circumstances; retrieve in CSS with #
+class - used for more general selectors; retrieve with .
+elements - retrieve with just thier name
+
+
+Font/color:
+    color - sets for text
+    font-size
+    font-style - sets italics
+    font-weight - sets bold
+
+Alignment/spacing:
+    padding (top/right/bottom/left) - adds space bet element and its own border
+    margin (top/right/bottom/left) - ads space bet element and surrounding elements;
+            use for top and bottom of page (use padding everywhere else)
+    float - outdated, forces elements to sides, center, or top;
+            instead use width ; __% or a GRID SYSTEM
+
+Background:
+    background-color
+    background-images
+------------------
+
+Relative File Paths
+
+Do NOT use absolute file paths--easy to hack.
+Put everything in the same folder and use relative paths.
+
+./"filename.css"
+../"filename.css"
+
+Don't use unique names--
+index.html to anchor, for first html page in any project
+style.css
+index.js
+
+Box model:
+    Whenever you create a tag, it's a box
+    In CSS, every element rests within a series of boxes; each box has customizable space properties:
+            margin, border, and padding
+            (typical spacing: 20 px, 10px, 10px, 20px)
+
+floats aren't interactive, flex is.  flex is sometimes used with grids
